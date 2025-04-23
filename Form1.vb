@@ -16,8 +16,17 @@ Public Class Form1
             txtFechaNac.Value = ds.Item(0).fecha_nac
             txtSexo.Text = ds.Item(0).sexo
             txtEstado.Text = ds.Item(0).estado
-        Else
+            DatosAfiliaciones.DataSource = ds
 
+        Else
+            txtCI.Clear()
+            txtNombre.Clear()
+            txtSexo.Clear()
+            txtEstado.Text = "Esperando."
+            txtFechaNac.Value = Now.Date
+            If MsgBox("El numero del CI de la persona no esta registrasa" & vbNewLine & "Desea registrarlo?", MsgBoxStyle.YesNo, "Registrar Nuevo ASegurado") = MsgBoxResult.Yes Then
+                MsgBox("Aqui crear el nuevo asegurado")
+            End If
         End If
     End Sub
 End Class

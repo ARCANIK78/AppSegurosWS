@@ -34,12 +34,15 @@ Partial Class Form1
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.DatosAfiliaciones = New System.Windows.Forms.DataGridView()
         Me.Button1 = New System.Windows.Forms.Button()
+        Me.ColFecha = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ColAccion = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ColSeguro = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.GruoBox.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DatosAfiliaciones, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
@@ -55,7 +58,7 @@ Partial Class Form1
         '
         Me.txtCI.Location = New System.Drawing.Point(145, 13)
         Me.txtCI.Name = "txtCI"
-        Me.txtCI.Size = New System.Drawing.Size(323, 20)
+        Me.txtCI.Size = New System.Drawing.Size(278, 20)
         Me.txtCI.TabIndex = 1
         '
         'GruoBox
@@ -69,7 +72,7 @@ Partial Class Form1
         Me.GruoBox.Controls.Add(Me.Label2)
         Me.GruoBox.Location = New System.Drawing.Point(26, 39)
         Me.GruoBox.Name = "GruoBox"
-        Me.GruoBox.Size = New System.Drawing.Size(654, 185)
+        Me.GruoBox.Size = New System.Drawing.Size(523, 185)
         Me.GruoBox.TabIndex = 2
         Me.GruoBox.TabStop = False
         Me.GruoBox.Text = "Datos del Asegurado"
@@ -79,7 +82,7 @@ Partial Class Form1
         Me.GroupBox2.Controls.Add(Me.txtEstado)
         Me.GroupBox2.Location = New System.Drawing.Point(17, 105)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(624, 74)
+        Me.GroupBox2.Size = New System.Drawing.Size(496, 74)
         Me.GroupBox2.TabIndex = 9
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Estado"
@@ -150,36 +153,59 @@ Partial Class Form1
         '
         'GroupBox1
         '
-        Me.GroupBox1.Controls.Add(Me.DataGridView1)
+        Me.GroupBox1.Controls.Add(Me.DatosAfiliaciones)
         Me.GroupBox1.Location = New System.Drawing.Point(26, 230)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(654, 268)
+        Me.GroupBox1.Size = New System.Drawing.Size(523, 288)
         Me.GroupBox1.TabIndex = 3
         Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "Historial"
+        Me.GroupBox1.Text = "Historial de altas y bajs"
         '
-        'DataGridView1
+        'DatosAfiliaciones
         '
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(27, 30)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(591, 234)
-        Me.DataGridView1.TabIndex = 0
+        Me.DatosAfiliaciones.AllowUserToAddRows = False
+        Me.DatosAfiliaciones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DatosAfiliaciones.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ColFecha, Me.ColAccion, Me.ColSeguro})
+        Me.DatosAfiliaciones.Location = New System.Drawing.Point(17, 19)
+        Me.DatosAfiliaciones.Name = "DatosAfiliaciones"
+        Me.DatosAfiliaciones.RowHeadersVisible = False
+        Me.DatosAfiliaciones.Size = New System.Drawing.Size(496, 263)
+        Me.DatosAfiliaciones.TabIndex = 0
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(474, 12)
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.Button1.Location = New System.Drawing.Point(429, 12)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(193, 24)
+        Me.Button1.Size = New System.Drawing.Size(120, 24)
         Me.Button1.TabIndex = 4
         Me.Button1.Text = "Consultar"
         Me.Button1.UseVisualStyleBackColor = True
+        '
+        'ColFecha
+        '
+        Me.ColFecha.DataPropertyName = "fecha"
+        Me.ColFecha.HeaderText = "FECHA DE ALTA/BAJAS"
+        Me.ColFecha.Name = "ColFecha"
+        '
+        'ColAccion
+        '
+        Me.ColAccion.DataPropertyName = "EstadoT"
+        Me.ColAccion.HeaderText = "ALTAS/BAJAS"
+        Me.ColAccion.Name = "ColAccion"
+        '
+        'ColSeguro
+        '
+        Me.ColSeguro.DataPropertyName = "Seguros"
+        Me.ColSeguro.HeaderText = "SEGUROS DE SALUD"
+        Me.ColSeguro.Name = "ColSeguro"
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(715, 527)
+        Me.BackColor = System.Drawing.Color.White
+        Me.ClientSize = New System.Drawing.Size(572, 530)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.GruoBox)
@@ -193,7 +219,7 @@ Partial Class Form1
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
         Me.GroupBox1.ResumeLayout(False)
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DatosAfiliaciones, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -209,8 +235,11 @@ Partial Class Form1
     Friend WithEvents txtFechaNac As DateTimePicker
     Friend WithEvents txtNombre As TextBox
     Friend WithEvents GroupBox1 As GroupBox
-    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents DatosAfiliaciones As DataGridView
     Friend WithEvents Button1 As Button
     Friend WithEvents GroupBox2 As GroupBox
     Friend WithEvents txtEstado As Label
+    Friend WithEvents ColFecha As DataGridViewTextBoxColumn
+    Friend WithEvents ColAccion As DataGridViewTextBoxColumn
+    Friend WithEvents ColSeguro As DataGridViewTextBoxColumn
 End Class
