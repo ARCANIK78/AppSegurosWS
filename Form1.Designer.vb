@@ -193,9 +193,9 @@ Partial Class Form1
         '
         'IconButton1
         '
-        Me.IconButton1.BackColor = System.Drawing.SystemColors.Control
+        Me.IconButton1.BackColor = System.Drawing.Color.White
         Me.IconButton1.FlatAppearance.BorderSize = 0
-        Me.IconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.IconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.IconButton1.Flip = FontAwesome.Sharp.FlipOrientation.Normal
         Me.IconButton1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.IconButton1.IconChar = FontAwesome.Sharp.IconChar.Search
@@ -212,6 +212,7 @@ Partial Class Form1
         '
         'BtnOpcion
         '
+        Me.BtnOpcion.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnOpcion.Flip = FontAwesome.Sharp.FlipOrientation.Normal
         Me.BtnOpcion.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnOpcion.IconChar = FontAwesome.Sharp.IconChar.Wpforms
@@ -230,6 +231,7 @@ Partial Class Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(563, 555)
         Me.Controls.Add(Me.BtnOpcion)
@@ -238,6 +240,7 @@ Partial Class Form1
         Me.Controls.Add(Me.GruoBox)
         Me.Controls.Add(Me.txtCI)
         Me.Controls.Add(Me.Label1)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.Name = "Form1"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Consultar Asegurado"
