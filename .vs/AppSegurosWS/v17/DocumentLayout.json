@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\DELL\\Documents\\Tareas de universidad\\Ingenieria de software 2\\WS_seguros-app\\AppSegurosWS\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{10A2EF5B-AE24-4B66-A6EA-3E61152030C3}|AppSegurosWS.vbproj|c:\\users\\dell\\documents\\tareas de universidad\\ingenieria de software 2\\ws_seguros-app\\appsegurosws\\form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
-      "RelativeMoniker": "D:0:0:{10A2EF5B-AE24-4B66-A6EA-3E61152030C3}|AppSegurosWS.vbproj|solutionrelative:form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+      "AbsoluteMoniker": "D:0:0:{10A2EF5B-AE24-4B66-A6EA-3E61152030C3}|AppSegurosWS.vbproj|c:\\users\\dell\\documents\\tareas de universidad\\ingenieria de software 2\\ws_seguros-app\\appsegurosws\\form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{10A2EF5B-AE24-4B66-A6EA-3E61152030C3}|AppSegurosWS.vbproj|solutionrelative:form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{10A2EF5B-AE24-4B66-A6EA-3E61152030C3}|AppSegurosWS.vbproj|C:\\Users\\DELL\\Documents\\Tareas de universidad\\Ingenieria de software 2\\WS_seguros-app\\AppSegurosWS\\form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
-      "RelativeMoniker": "D:0:0:{10A2EF5B-AE24-4B66-A6EA-3E61152030C3}|AppSegurosWS.vbproj|solutionrelative:form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+      "AbsoluteMoniker": "D:0:0:{10A2EF5B-AE24-4B66-A6EA-3E61152030C3}|AppSegurosWS.vbproj|C:\\Users\\DELL\\Documents\\Tareas de universidad\\Ingenieria de software 2\\WS_seguros-app\\AppSegurosWS\\form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{10A2EF5B-AE24-4B66-A6EA-3E61152030C3}|AppSegurosWS.vbproj|solutionrelative:form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,7 +18,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -38,7 +38,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Form1.vb [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\DELL\\Documents\\Tareas de universidad\\Ingenieria de software 2\\WS_seguros-app\\AppSegurosWS\\Form1.vb",
               "RelativeDocumentMoniker": "Form1.vb",
@@ -50,16 +50,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Form1.vb",
               "DocumentMoniker": "C:\\Users\\DELL\\Documents\\Tareas de universidad\\Ingenieria de software 2\\WS_seguros-app\\AppSegurosWS\\Form1.vb",
               "RelativeDocumentMoniker": "Form1.vb",
               "ToolTip": "C:\\Users\\DELL\\Documents\\Tareas de universidad\\Ingenieria de software 2\\WS_seguros-app\\AppSegurosWS\\Form1.vb",
               "RelativeToolTip": "Form1.vb",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAApAAAAAAAAAA==",
+              "ViewState": "AgIAAC8AAAAAAAAAAAAwwBUAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-04-16T00:27:32.631Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-16T00:27:32.631Z"
             }
           ]
         }

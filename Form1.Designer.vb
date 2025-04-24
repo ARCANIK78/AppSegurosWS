@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Form1
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class Form1
     'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
     'Se puede modificar usando el Diseñador de Windows Forms.  
     'No lo modifique con el editor de código.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.txtCI = New System.Windows.Forms.TextBox()
@@ -38,8 +38,8 @@ Partial Class Form1
         Me.ColFecha = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ColAccion = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ColSeguro = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.BtnOpcion = New System.Windows.Forms.Button()
+        Me.IconButton1 = New FontAwesome.Sharp.IconButton()
+        Me.BtnOpcion = New FontAwesome.Sharp.IconButton()
         Me.GruoBox.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
@@ -51,9 +51,9 @@ Partial Class Form1
         Me.Label1.AutoSize = True
         Me.Label1.Location = New System.Drawing.Point(23, 16)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(114, 13)
+        Me.Label1.Size = New System.Drawing.Size(115, 13)
         Me.Label1.TabIndex = 0
-        Me.Label1.Text = "ingresar CI Asegurado:"
+        Me.Label1.Text = "Ingresar CI Asegurado:"
         '
         'txtCI
         '
@@ -191,23 +191,39 @@ Partial Class Form1
         Me.ColSeguro.HeaderText = "SEGUROS DE SALUD"
         Me.ColSeguro.Name = "ColSeguro"
         '
-        'Button1
+        'IconButton1
         '
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.Button1.Location = New System.Drawing.Point(429, 12)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(120, 24)
-        Me.Button1.TabIndex = 4
-        Me.Button1.Text = "Consultar"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.IconButton1.BackColor = System.Drawing.SystemColors.Control
+        Me.IconButton1.FlatAppearance.BorderSize = 0
+        Me.IconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.IconButton1.Flip = FontAwesome.Sharp.FlipOrientation.Normal
+        Me.IconButton1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.IconButton1.IconChar = FontAwesome.Sharp.IconChar.Search
+        Me.IconButton1.IconColor = System.Drawing.Color.Black
+        Me.IconButton1.IconSize = 24
+        Me.IconButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.IconButton1.Location = New System.Drawing.Point(429, 13)
+        Me.IconButton1.Name = "IconButton1"
+        Me.IconButton1.Rotation = 0R
+        Me.IconButton1.Size = New System.Drawing.Size(120, 23)
+        Me.IconButton1.TabIndex = 6
+        Me.IconButton1.Text = "Consultar"
+        Me.IconButton1.UseVisualStyleBackColor = False
         '
         'BtnOpcion
         '
-        Me.BtnOpcion.Location = New System.Drawing.Point(207, 525)
+        Me.BtnOpcion.Flip = FontAwesome.Sharp.FlipOrientation.Normal
+        Me.BtnOpcion.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnOpcion.IconChar = FontAwesome.Sharp.IconChar.Wpforms
+        Me.BtnOpcion.IconColor = System.Drawing.Color.Black
+        Me.BtnOpcion.IconSize = 25
+        Me.BtnOpcion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.BtnOpcion.Location = New System.Drawing.Point(196, 518)
         Me.BtnOpcion.Name = "BtnOpcion"
-        Me.BtnOpcion.Size = New System.Drawing.Size(142, 23)
-        Me.BtnOpcion.TabIndex = 5
-        Me.BtnOpcion.Text = "Button2"
+        Me.BtnOpcion.Rotation = 0R
+        Me.BtnOpcion.Size = New System.Drawing.Size(143, 30)
+        Me.BtnOpcion.TabIndex = 7
+        Me.BtnOpcion.Text = "IconButton2"
         Me.BtnOpcion.UseVisualStyleBackColor = True
         '
         'Form1
@@ -215,9 +231,9 @@ Partial Class Form1
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(566, 555)
+        Me.ClientSize = New System.Drawing.Size(563, 555)
         Me.Controls.Add(Me.BtnOpcion)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.IconButton1)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.GruoBox)
         Me.Controls.Add(Me.txtCI)
@@ -247,11 +263,11 @@ Partial Class Form1
     Friend WithEvents txtNombre As TextBox
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents DatosAfiliaciones As DataGridView
-    Friend WithEvents Button1 As Button
     Friend WithEvents GroupBox2 As GroupBox
     Friend WithEvents txtEstado As Label
     Friend WithEvents ColFecha As DataGridViewTextBoxColumn
     Friend WithEvents ColAccion As DataGridViewTextBoxColumn
     Friend WithEvents ColSeguro As DataGridViewTextBoxColumn
-    Friend WithEvents BtnOpcion As Button
+    Friend WithEvents IconButton1 As FontAwesome.Sharp.IconButton
+    Friend WithEvents BtnOpcion As FontAwesome.Sharp.IconButton
 End Class

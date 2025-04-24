@@ -25,8 +25,7 @@ Public Class Form1
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         BtnOpcion.Visible = False
     End Sub
-
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub IconButton1_Click(sender As Object, e As EventArgs) Handles IconButton1.Click
         Dim WS As New WS.WebService1SoapClient
         Dim CI As String = txtCI.Text
         Dim ds As New db.HistorialAfilacionesDataTable
@@ -74,7 +73,7 @@ Public Class Form1
                 End If
             Else
                 estado2 = "BAJA"
-                Dim respuesta As String = InputBox("Ingrese su seguro ", "Dar de Alta Asegurado")
+                Dim respuesta As String = InputBox("Ingrese su seguro ", "Dar de Alta Asegurado " & txtNombre.Text)
                 If respuesta <> "" Then
                     MsgBox(ws.DarAltas(txtCI.Text, respuesta))
                     MostrarHistorial()
@@ -85,5 +84,6 @@ Public Class Form1
 
         End Try
     End Sub
+
 
 End Class
