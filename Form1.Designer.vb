@@ -39,7 +39,7 @@ Partial Class Form1
         Me.ColAccion = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ColSeguro = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Button1 = New System.Windows.Forms.Button()
-        Me.btnOpcion = New System.Windows.Forms.Button()
+        Me.BtnOpcion = New System.Windows.Forms.Button()
         Me.GruoBox.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
@@ -201,22 +201,22 @@ Partial Class Form1
         Me.Button1.Text = "Consultar"
         Me.Button1.UseVisualStyleBackColor = True
         '
-        'btnOpcion
+        'BtnOpcion
         '
-        Me.btnOpcion.Location = New System.Drawing.Point(207, 525)
-        Me.btnOpcion.Name = "btnOpcion"
-        Me.btnOpcion.Size = New System.Drawing.Size(142, 23)
-        Me.btnOpcion.TabIndex = 5
-        Me.btnOpcion.Text = "Button2"
-        Me.btnOpcion.UseVisualStyleBackColor = True
+        Me.BtnOpcion.Location = New System.Drawing.Point(207, 525)
+        Me.BtnOpcion.Name = "BtnOpcion"
+        Me.BtnOpcion.Size = New System.Drawing.Size(142, 23)
+        Me.BtnOpcion.TabIndex = 5
+        Me.BtnOpcion.Text = "Button2"
+        Me.BtnOpcion.UseVisualStyleBackColor = True
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(572, 555)
-        Me.Controls.Add(Me.btnOpcion)
+        Me.ClientSize = New System.Drawing.Size(566, 555)
+        Me.Controls.Add(Me.BtnOpcion)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.GruoBox)
@@ -253,5 +253,5 @@ Partial Class Form1
     Friend WithEvents ColFecha As DataGridViewTextBoxColumn
     Friend WithEvents ColAccion As DataGridViewTextBoxColumn
     Friend WithEvents ColSeguro As DataGridViewTextBoxColumn
-    Friend WithEvents btnOpcion As Button
+    Friend WithEvents BtnOpcion As Button
 End Class

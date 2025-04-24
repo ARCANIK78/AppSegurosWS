@@ -1,8 +1,29 @@
 ﻿Imports AppSegurosWS.WS
 Public Class Form1
     Dim estado2 As String
+    Private Sub MostrarHistorial()
+        Dim WS As New WS.WebService1SoapClient
+        Dim CI As String = txtCI.Text
+        Dim ds As New db.HistorialAfilacionesDataTable
+        ds = WS.ConsultarHistorial(txtCI.Text)
+        txtEstado.Text = ds.Item(0).estado
+        DatosAfiliaciones.DataSource = ds
+        DatosAfiliaciones.Columns.Remove("CI")
+        DatosAfiliaciones.Columns.Remove("Asegurado")
+        DatosAfiliaciones.Columns.Remove("Estado")
+        DatosAfiliaciones.Columns.Remove("fecha_nac")
+        DatosAfiliaciones.Columns.Remove("Sexo")
+        If ds.Item(0).estado = "ALTA" Then
+            BtnOpcion.Text = "DAR BAJA"
+            estado2 = "ALTA"
+        Else
+            BtnOpcion.Text = "DAR ALTA"
+            estado2 = "BAJA"
+        End If
+
+    End Sub
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        btnOpcion.Visible = False
+        BtnOpcion.Visible = False
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
@@ -21,12 +42,12 @@ Public Class Form1
             DatosAfiliaciones.Columns.Remove("Estado")
             DatosAfiliaciones.Columns.Remove("fecha_nac")
             DatosAfiliaciones.Columns.Remove("Sexo")
-            btnOpcion.Visible = True
+            BtnOpcion.Visible = True
             If ds.Item(0).estado = "ALTA" Then
-                btnOpcion.Text = "DAR BAJA"
+                BtnOpcion.Text = "DAR BAJA"
                 estado2 = "ALTA"
             Else
-                btnOpcion.Text = "DAR ALTA"
+                BtnOpcion.Text = "DAR ALTA"
                 estado2 = "BAJA"
             End If
 
@@ -35,24 +56,34 @@ Public Class Form1
             txtNombre.Clear()
             txtSexo.Clear()
             txtEstado.Text = "Esperando."
-            txtFechaNac.Value = Now.Date
+            txtFechaNac.Value = Date.Now
             If MsgBox("El numero del CI de la persona no esta registrasa" & vbNewLine & "Desea registrarlo?", MsgBoxStyle.YesNo, "Registrar Nuevo ASegurado") = MsgBoxResult.Yes Then
                 MsgBox("Aqui crear el nuevo asegurado")
             End If
-            btnOpcion.Visible = False
+            BtnOpcion.Visible = False
         End If
     End Sub
 
-    Private Sub btnOpcion_Click(sender As Object, e As EventArgs) Handles btnOpcion.Click
+    Private Sub BtnOpcion_Click(sender As Object, e As EventArgs) Handles BtnOpcion.Click
         Try
             Dim ws As New WS.WebService1SoapClient
             If estado2 = "ALTA" Then
-                If MsgBox("Estas seguros de dar de bajas al asegurado " & txtNombre.Text, MsgBoxStyle.YesNo, "Dar de baja al asegurado") = MsgBoxStyle.YesNo Then
-                    ws.RegistrarBajas(txtCI.Text)
+                If MsgBox("Estas seguros de dar de bajas al asegurado " & txtNombre.Text, MsgBoxStyle.YesNo, "Dar de baja al asegurado") = MsgBoxResult.Yes Then
+                    MsgBox(ws.RegistrarBajas(txtCI.Text))
+                    MostrarHistorial()
                 End If
+            Else
+                estado2 = "BAJA"
+                Dim respuesta As String = InputBox("Ingrese su seguro ", "Dar de Alta Asegurado")
+                If respuesta <> "" Then
+                    MsgBox(ws.DarAltas(txtCI.Text, respuesta))
+                    MostrarHistorial()
+                End If
+
             End If
         Catch ex As Exception
 
         End Try
     End Sub
+
 End Class
