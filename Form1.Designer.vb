@@ -35,10 +35,11 @@ Partial Class Form1
         Me.Label2 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.DatosAfiliaciones = New System.Windows.Forms.DataGridView()
-        Me.Button1 = New System.Windows.Forms.Button()
         Me.ColFecha = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ColAccion = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ColSeguro = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.btnOpcion = New System.Windows.Forms.Button()
         Me.GruoBox.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
@@ -172,16 +173,6 @@ Partial Class Form1
         Me.DatosAfiliaciones.Size = New System.Drawing.Size(496, 263)
         Me.DatosAfiliaciones.TabIndex = 0
         '
-        'Button1
-        '
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.Button1.Location = New System.Drawing.Point(429, 12)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(120, 24)
-        Me.Button1.TabIndex = 4
-        Me.Button1.Text = "Consultar"
-        Me.Button1.UseVisualStyleBackColor = True
-        '
         'ColFecha
         '
         Me.ColFecha.DataPropertyName = "fecha"
@@ -200,12 +191,32 @@ Partial Class Form1
         Me.ColSeguro.HeaderText = "SEGUROS DE SALUD"
         Me.ColSeguro.Name = "ColSeguro"
         '
+        'Button1
+        '
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.Button1.Location = New System.Drawing.Point(429, 12)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(120, 24)
+        Me.Button1.TabIndex = 4
+        Me.Button1.Text = "Consultar"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'btnOpcion
+        '
+        Me.btnOpcion.Location = New System.Drawing.Point(207, 525)
+        Me.btnOpcion.Name = "btnOpcion"
+        Me.btnOpcion.Size = New System.Drawing.Size(142, 23)
+        Me.btnOpcion.TabIndex = 5
+        Me.btnOpcion.Text = "Button2"
+        Me.btnOpcion.UseVisualStyleBackColor = True
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(572, 530)
+        Me.ClientSize = New System.Drawing.Size(572, 555)
+        Me.Controls.Add(Me.btnOpcion)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.GruoBox)
@@ -242,4 +253,5 @@ Partial Class Form1
     Friend WithEvents ColFecha As DataGridViewTextBoxColumn
     Friend WithEvents ColAccion As DataGridViewTextBoxColumn
     Friend WithEvents ColSeguro As DataGridViewTextBoxColumn
+    Friend WithEvents btnOpcion As Button
 End Class
