@@ -40,6 +40,7 @@ Partial Class Form1
         Me.ColSeguro = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.IconButton1 = New FontAwesome.Sharp.IconButton()
         Me.BtnOpcion = New FontAwesome.Sharp.IconButton()
+        Me.Label4 = New System.Windows.Forms.Label()
         Me.GruoBox.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
@@ -80,6 +81,7 @@ Partial Class Form1
         '
         'GroupBox2
         '
+        Me.GroupBox2.Controls.Add(Me.Label4)
         Me.GroupBox2.Controls.Add(Me.txtEstado)
         Me.GroupBox2.Location = New System.Drawing.Point(17, 105)
         Me.GroupBox2.Name = "GroupBox2"
@@ -227,6 +229,16 @@ Partial Class Form1
         Me.BtnOpcion.Text = "IconButton2"
         Me.BtnOpcion.UseVisualStyleBackColor = True
         '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Location = New System.Drawing.Point(272, 26)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(101, 16)
+        Me.Label4.TabIndex = 10
+        Me.Label4.Text = "seleccionado"
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -273,4 +285,5 @@ Partial Class Form1
     Friend WithEvents ColSeguro As DataGridViewTextBoxColumn
     Friend WithEvents IconButton1 As FontAwesome.Sharp.IconButton
     Friend WithEvents BtnOpcion As FontAwesome.Sharp.IconButton
+    Friend WithEvents Label4 As Label
 End Class

@@ -208,4 +208,12 @@
       <msdata:Relationship name="FK_TSeguros_TTipos" msdata:parent="TTipos" msdata:child="TSeguros" msdata:parentkey="TipoID" msdata:childkey="TipoID" />
     </xs:appinfo>
   </xs:annotation>
+  <xs:annotation>
+    <xs:appinfo>
+      <msdata:Relationship name="FK_TAfiliaciones_TPersonas" msdata:parent="TPersonas" msdata:child="TAfiliaciones" msdata:parentkey="CI" msdata:childkey="CI" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" />
+      <msdata:Relationship name="FK_TAfiliaciones_TSeguros" msdata:parent="TSeguros" msdata:child="TAfiliaciones" msdata:parentkey="SegurosID" msdata:childkey="SegurosID" />
+      <msdata:Relationship name="FK_TSeguros_TLugares" msdata:parent="TLugares" msdata:child="TSeguros" msdata:parentkey="LugarID" msdata:childkey="LugarID" />
+      <msdata:Relationship name="FK_TSeguros_TTipos" msdata:parent="TTipos" msdata:child="TSeguros" msdata:parentkey="TipoID" msdata:childkey="TipoID" />
+    </xs:appinfo>
+  </xs:annotation>
 </xs:schema>

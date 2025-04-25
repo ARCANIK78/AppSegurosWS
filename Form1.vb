@@ -3,8 +3,8 @@ Public Class Form1
     Dim estado2 As String
     Private Sub MostrarHistorial()
         Dim WS As New WS.WebService1SoapClient
-        Dim CI As String = txtCI.Text
         Dim ds As New db.HistorialAfilacionesDataTable
+        Dim CI As String = txtCI.Text
         ds = WS.ConsultarHistorial(txtCI.Text)
         txtEstado.Text = ds.Item(0).estado
         DatosAfiliaciones.DataSource = ds
@@ -73,17 +73,18 @@ Public Class Form1
                 End If
             Else
                 estado2 = "BAJA"
+                Mensaje.ShowDialog()
+                Dim seleccionado As String = Mensaje.ComboBox1.SelectedItem()
+                Label4.Text = seleccionado
                 Dim respuesta As String = InputBox("Ingrese su seguro ", "Dar de Alta Asegurado " & txtNombre.Text)
                 If respuesta <> "" Then
                     MsgBox(ws.DarAltas(txtCI.Text, respuesta))
                     MostrarHistorial()
                 End If
-
             End If
         Catch ex As Exception
 
         End Try
     End Sub
-
-
 End Class
+

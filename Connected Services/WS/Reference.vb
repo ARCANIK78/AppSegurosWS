@@ -59,6 +59,13 @@ Namespace WS
         
         <System.ServiceModel.OperationContractAttribute(Action:="http://tempuri.org/ConsultarHistorial", ReplyAction:="*")>  _
         Function ConsultarHistorialAsync(ByVal CI As String) As System.Threading.Tasks.Task(Of db.HistorialAfilacionesDataTable)
+        
+        <System.ServiceModel.OperationContractAttribute(Action:="http://tempuri.org/MostrarSeguros", ReplyAction:="*"),  _
+         System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults:=true)>  _
+        Function MostrarSeguros() As db.TSegurosDataTable
+        
+        <System.ServiceModel.OperationContractAttribute(Action:="http://tempuri.org/MostrarSeguros", ReplyAction:="*")>  _
+        Function MostrarSegurosAsync() As System.Threading.Tasks.Task(Of db.TSegurosDataTable)
     End Interface
     
     'Esta definición de tipo ha sido generada por la extensión del importador de esquemas System.Data.Design.TypedDataSetSchemaImporterExtensionFx35.
@@ -3288,6 +3295,14 @@ Namespace WS
         
         Public Function ConsultarHistorialAsync(ByVal CI As String) As System.Threading.Tasks.Task(Of db.HistorialAfilacionesDataTable) Implements WS.WebService1Soap.ConsultarHistorialAsync
             Return MyBase.Channel.ConsultarHistorialAsync(CI)
+        End Function
+        
+        Public Function MostrarSeguros() As db.TSegurosDataTable Implements WS.WebService1Soap.MostrarSeguros
+            Return MyBase.Channel.MostrarSeguros
+        End Function
+        
+        Public Function MostrarSegurosAsync() As System.Threading.Tasks.Task(Of db.TSegurosDataTable) Implements WS.WebService1Soap.MostrarSegurosAsync
+            Return MyBase.Channel.MostrarSegurosAsync
         End Function
     End Class
 End Namespace
