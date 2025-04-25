@@ -74,11 +74,10 @@ Public Class Form1
             Else
                 estado2 = "BAJA"
                 Mensaje.ShowDialog()
-                Dim seleccionado As String = Mensaje.ComboBox1.SelectedItem()
-                Label4.Text = seleccionado
-                Dim respuesta As String = InputBox("Ingrese su seguro ", "Dar de Alta Asegurado " & txtNombre.Text)
-                If respuesta <> "" Then
-                    MsgBox(ws.DarAltas(txtCI.Text, respuesta))
+                Dim seleccionado As String = Mensaje.IdSeleccionado
+                'Dim respuesta As String = InputBox("Ingrese su seguro ", "Dar de Alta Asegurado " & txtNombre.Text)'
+                If seleccionado <> "" Then
+                    MsgBox(ws.DarAltas(txtCI.Text, seleccionado))
                     MostrarHistorial()
                 End If
             End If
@@ -88,3 +87,5 @@ Public Class Form1
     End Sub
 End Class
 
+'Dim idSeleccionado As Integer = mensajeForm.IdSeleccionado'
+'Label4.Text = idSeleccionado.ToString()'
