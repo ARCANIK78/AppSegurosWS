@@ -23,9 +23,9 @@ Partial Class Mensaje
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.IconButton2 = New FontAwesome.Sharp.IconButton()
         Me.IconButton1 = New FontAwesome.Sharp.IconButton()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.IconButton2 = New FontAwesome.Sharp.IconButton()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -40,6 +40,23 @@ Partial Class Mensaje
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Seleccione su Seguro del Afiliado"
+        '
+        'IconButton2
+        '
+        Me.IconButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.IconButton2.Flip = FontAwesome.Sharp.FlipOrientation.Normal
+        Me.IconButton2.IconChar = FontAwesome.Sharp.IconChar.Xing
+        Me.IconButton2.IconColor = System.Drawing.Color.Black
+        Me.IconButton2.IconSize = 16
+        Me.IconButton2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.IconButton2.Location = New System.Drawing.Point(262, 51)
+        Me.IconButton2.Name = "IconButton2"
+        Me.IconButton2.Rotation = 0R
+        Me.IconButton2.Size = New System.Drawing.Size(75, 23)
+        Me.IconButton2.TabIndex = 2
+        Me.IconButton2.Text = "Cancelar"
+        Me.IconButton2.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.IconButton2.UseVisualStyleBackColor = True
         '
         'IconButton1
         '
@@ -69,23 +86,6 @@ Partial Class Mensaje
         Me.ComboBox1.Size = New System.Drawing.Size(279, 21)
         Me.ComboBox1.TabIndex = 0
         Me.ComboBox1.Text = "Seleccion aqui.."
-        '
-        'IconButton2
-        '
-        Me.IconButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.IconButton2.Flip = FontAwesome.Sharp.FlipOrientation.Normal
-        Me.IconButton2.IconChar = FontAwesome.Sharp.IconChar.Xing
-        Me.IconButton2.IconColor = System.Drawing.Color.Black
-        Me.IconButton2.IconSize = 16
-        Me.IconButton2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.IconButton2.Location = New System.Drawing.Point(262, 51)
-        Me.IconButton2.Name = "IconButton2"
-        Me.IconButton2.Rotation = 0R
-        Me.IconButton2.Size = New System.Drawing.Size(75, 23)
-        Me.IconButton2.TabIndex = 2
-        Me.IconButton2.Text = "Cancelar"
-        Me.IconButton2.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.IconButton2.UseVisualStyleBackColor = True
         '
         'Mensaje
         '

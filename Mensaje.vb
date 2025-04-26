@@ -33,6 +33,14 @@ Public Class Mensaje
         If seguros.ContainsKey(seleccionado) Then
             IdSeleccionado = seguros(seleccionado) ' Actualizar la propiedad con el id asociado al nombre
         End If
+        ComboBox1.Items.Clear()
         Me.Close()
+    End Sub
+
+    Private Sub IconButton2_Click(sender As Object, e As EventArgs) Handles IconButton2.Click
+        _idSeleccionado = 0
+        ComboBox1.Items.Clear()
+        Me.Close()
+
     End Sub
 End Class

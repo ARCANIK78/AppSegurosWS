@@ -75,14 +75,13 @@ Public Class Form1
                 estado2 = "BAJA"
                 Mensaje.ShowDialog()
                 Dim seleccionado As String = Mensaje.IdSeleccionado
-                'Dim respuesta As String = InputBox("Ingrese su seguro ", "Dar de Alta Asegurado " & txtNombre.Text)'
-                If seleccionado <> "" Then
+                If seleccionado <> "" AndAlso seleccionado <> "0" Then
                     MsgBox(ws.DarAltas(txtCI.Text, seleccionado))
                     MostrarHistorial()
                 End If
             End If
         Catch ex As Exception
-
+            ' Manejo de excepciones opcional
         End Try
     End Sub
 End Class
