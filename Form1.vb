@@ -85,6 +85,3 @@ Public Class Form1
         End Try
     End Sub
 End Class
-
-'Dim idSeleccionado As Integer = mensajeForm.IdSeleccionado'
-'Label4.Text = idSeleccionado.ToString()'
