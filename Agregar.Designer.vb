@@ -22,74 +22,75 @@ Partial Class Agregar
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.txtCIR = New System.Windows.Forms.TextBox()
+        Me.txtNombreR = New System.Windows.Forms.TextBox()
         Me.txtFechaNac = New System.Windows.Forms.DateTimePicker()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
+        Me.txtMaternoR = New System.Windows.Forms.TextBox()
+        Me.txtPaternoR = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
-        Me.ComboBox3 = New System.Windows.Forms.ComboBox()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.Label7 = New System.Windows.Forms.Label()
         Me.IconButton1 = New FontAwesome.Sharp.IconButton()
         Me.IconButton2 = New FontAwesome.Sharp.IconButton()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.txtSegurosR = New System.Windows.Forms.ComboBox()
+        Me.txtSexoR = New System.Windows.Forms.ComboBox()
+        Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
-        'TextBox1
+        'txtCIR
         '
-        Me.TextBox1.Location = New System.Drawing.Point(112, 34)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(245, 20)
-        Me.TextBox1.TabIndex = 0
+        Me.txtCIR.Location = New System.Drawing.Point(136, 34)
+        Me.txtCIR.Name = "txtCIR"
+        Me.txtCIR.Size = New System.Drawing.Size(268, 20)
+        Me.txtCIR.TabIndex = 0
         '
-        'TextBox2
+        'txtNombreR
         '
-        Me.TextBox2.Location = New System.Drawing.Point(112, 60)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(245, 20)
-        Me.TextBox2.TabIndex = 1
+        Me.txtNombreR.Location = New System.Drawing.Point(136, 60)
+        Me.txtNombreR.Name = "txtNombreR"
+        Me.txtNombreR.Size = New System.Drawing.Size(268, 20)
+        Me.txtNombreR.TabIndex = 1
         '
         'txtFechaNac
         '
         Me.txtFechaNac.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.txtFechaNac.Location = New System.Drawing.Point(112, 145)
+        Me.txtFechaNac.Location = New System.Drawing.Point(136, 145)
         Me.txtFechaNac.MaxDate = New Date(9998, 12, 1, 0, 0, 0, 0)
         Me.txtFechaNac.Name = "txtFechaNac"
-        Me.txtFechaNac.Size = New System.Drawing.Size(130, 20)
+        Me.txtFechaNac.Size = New System.Drawing.Size(153, 20)
         Me.txtFechaNac.TabIndex = 6
         '
-        'TextBox3
+        'txtMaternoR
         '
-        Me.TextBox3.Location = New System.Drawing.Point(112, 119)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(245, 20)
-        Me.TextBox3.TabIndex = 7
+        Me.txtMaternoR.Location = New System.Drawing.Point(136, 119)
+        Me.txtMaternoR.Name = "txtMaternoR"
+        Me.txtMaternoR.Size = New System.Drawing.Size(268, 20)
+        Me.txtMaternoR.TabIndex = 7
         '
-        'TextBox4
+        'txtPaternoR
         '
-        Me.TextBox4.Location = New System.Drawing.Point(112, 86)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(245, 20)
-        Me.TextBox4.TabIndex = 8
+        Me.txtPaternoR.Location = New System.Drawing.Point(136, 86)
+        Me.txtPaternoR.Name = "txtPaternoR"
+        Me.txtPaternoR.Size = New System.Drawing.Size(268, 20)
+        Me.txtPaternoR.TabIndex = 8
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(48, 34)
+        Me.Label1.Location = New System.Drawing.Point(15, 34)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(55, 13)
+        Me.Label1.Size = New System.Drawing.Size(72, 13)
         Me.Label1.TabIndex = 9
-        Me.Label1.Text = "Ingrese CI"
+        Me.Label1.Text = "Numero de CI"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(21, 93)
+        Me.Label2.Location = New System.Drawing.Point(15, 93)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(84, 13)
         Me.Label2.TabIndex = 10
@@ -98,7 +99,7 @@ Partial Class Agregar
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(21, 63)
+        Me.Label3.Location = New System.Drawing.Point(15, 63)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(82, 13)
         Me.Label3.TabIndex = 10
@@ -107,7 +108,7 @@ Partial Class Agregar
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(21, 119)
+        Me.Label4.Location = New System.Drawing.Point(15, 119)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(86, 13)
         Me.Label4.TabIndex = 11
@@ -116,118 +117,136 @@ Partial Class Agregar
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(-1, 151)
+        Me.Label5.Location = New System.Drawing.Point(15, 151)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(108, 13)
         Me.Label5.TabIndex = 12
         Me.Label5.Text = "Fecha de Nacimiento"
         '
-        'ComboBox2
-        '
-        Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Location = New System.Drawing.Point(112, 171)
-        Me.ComboBox2.Name = "ComboBox2"
-        Me.ComboBox2.Size = New System.Drawing.Size(91, 21)
-        Me.ComboBox2.TabIndex = 14
-        '
-        'ComboBox3
-        '
-        Me.ComboBox3.FormattingEnabled = True
-        Me.ComboBox3.Location = New System.Drawing.Point(112, 198)
-        Me.ComboBox3.Name = "ComboBox3"
-        Me.ComboBox3.Size = New System.Drawing.Size(253, 21)
-        Me.ComboBox3.TabIndex = 15
-        '
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(72, 174)
+        Me.Label6.Location = New System.Drawing.Point(15, 174)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(31, 13)
         Me.Label6.TabIndex = 16
         Me.Label6.Text = "Sexo"
         '
-        'Label7
-        '
-        Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(28, 201)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(79, 13)
-        Me.Label7.TabIndex = 17
-        Me.Label7.Text = "Ingrese Seguro"
-        '
         'IconButton1
         '
+        Me.IconButton1.BackColor = System.Drawing.Color.White
+        Me.IconButton1.FlatAppearance.BorderColor = System.Drawing.Color.Black
+        Me.IconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.IconButton1.Flip = FontAwesome.Sharp.FlipOrientation.Normal
-        Me.IconButton1.IconChar = FontAwesome.Sharp.IconChar.Star
+        Me.IconButton1.IconChar = FontAwesome.Sharp.IconChar.Times
         Me.IconButton1.IconColor = System.Drawing.Color.Black
-        Me.IconButton1.IconSize = 16
+        Me.IconButton1.IconSize = 25
         Me.IconButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.IconButton1.Location = New System.Drawing.Point(112, 244)
+        Me.IconButton1.Location = New System.Drawing.Point(225, 266)
         Me.IconButton1.Name = "IconButton1"
         Me.IconButton1.Rotation = 0R
-        Me.IconButton1.Size = New System.Drawing.Size(98, 32)
+        Me.IconButton1.Size = New System.Drawing.Size(84, 29)
         Me.IconButton1.TabIndex = 18
         Me.IconButton1.Text = "Cancelar"
-        Me.IconButton1.UseVisualStyleBackColor = True
+        Me.IconButton1.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.IconButton1.UseVisualStyleBackColor = False
         '
         'IconButton2
         '
+        Me.IconButton2.BackColor = System.Drawing.Color.DodgerBlue
+        Me.IconButton2.FlatAppearance.BorderSize = 0
+        Me.IconButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.IconButton2.Flip = FontAwesome.Sharp.FlipOrientation.Normal
-        Me.IconButton2.IconChar = FontAwesome.Sharp.IconChar.Star
-        Me.IconButton2.IconColor = System.Drawing.Color.Black
-        Me.IconButton2.IconSize = 16
+        Me.IconButton2.ForeColor = System.Drawing.Color.White
+        Me.IconButton2.IconChar = FontAwesome.Sharp.IconChar.UserPlus
+        Me.IconButton2.IconColor = System.Drawing.Color.White
+        Me.IconButton2.IconSize = 25
         Me.IconButton2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.IconButton2.Location = New System.Drawing.Point(215, 244)
+        Me.IconButton2.Location = New System.Drawing.Point(315, 266)
         Me.IconButton2.Name = "IconButton2"
         Me.IconButton2.Rotation = 0R
-        Me.IconButton2.Size = New System.Drawing.Size(87, 32)
+        Me.IconButton2.Size = New System.Drawing.Size(106, 29)
         Me.IconButton2.TabIndex = 19
-        Me.IconButton2.Text = "Rgistrar"
-        Me.IconButton2.UseVisualStyleBackColor = True
+        Me.IconButton2.Text = "Rgistrar Nuevo"
+        Me.IconButton2.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.IconButton2.UseVisualStyleBackColor = False
+        '
+        'GroupBox1
+        '
+        Me.GroupBox1.Controls.Add(Me.txtSegurosR)
+        Me.GroupBox1.Location = New System.Drawing.Point(8, 198)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Size = New System.Drawing.Size(412, 62)
+        Me.GroupBox1.TabIndex = 20
+        Me.GroupBox1.TabStop = False
+        Me.GroupBox1.Text = "Seleccionar el Seguro para la Alta"
+        '
+        'txtSegurosR
+        '
+        Me.txtSegurosR.DisplayMember = "nombre"
+        Me.txtSegurosR.FormattingEnabled = True
+        Me.txtSegurosR.Location = New System.Drawing.Point(10, 19)
+        Me.txtSegurosR.Name = "txtSegurosR"
+        Me.txtSegurosR.Size = New System.Drawing.Size(386, 21)
+        Me.txtSegurosR.TabIndex = 16
+        Me.txtSegurosR.ValueMember = "SegurosID"
+        '
+        'txtSexoR
+        '
+        Me.txtSexoR.DisplayMember = "sexo"
+        Me.txtSexoR.FormattingEnabled = True
+        Me.txtSexoR.Items.AddRange(New Object() {"F", "M"})
+        Me.txtSexoR.Location = New System.Drawing.Point(136, 171)
+        Me.txtSexoR.Name = "txtSexoR"
+        Me.txtSexoR.Size = New System.Drawing.Size(114, 21)
+        Me.txtSexoR.TabIndex = 14
         '
         'Agregar
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(381, 307)
+        Me.BackColor = System.Drawing.Color.White
+        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.ClientSize = New System.Drawing.Size(431, 302)
+        Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.IconButton2)
         Me.Controls.Add(Me.IconButton1)
-        Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.Label6)
-        Me.Controls.Add(Me.ComboBox3)
-        Me.Controls.Add(Me.ComboBox2)
+        Me.Controls.Add(Me.txtSexoR)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.TextBox4)
-        Me.Controls.Add(Me.TextBox3)
+        Me.Controls.Add(Me.txtPaternoR)
+        Me.Controls.Add(Me.txtMaternoR)
         Me.Controls.Add(Me.txtFechaNac)
-        Me.Controls.Add(Me.TextBox2)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.txtNombreR)
+        Me.Controls.Add(Me.txtCIR)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
         Me.Name = "Agregar"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Agregar Nuevo Asegurado"
+        Me.GroupBox1.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
 
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents txtCIR As TextBox
+    Friend WithEvents txtNombreR As TextBox
     Friend WithEvents txtFechaNac As DateTimePicker
-    Friend WithEvents TextBox3 As TextBox
-    Friend WithEvents TextBox4 As TextBox
+    Friend WithEvents txtMaternoR As TextBox
+    Friend WithEvents txtPaternoR As TextBox
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents Label5 As Label
-    Friend WithEvents ComboBox2 As ComboBox
-    Friend WithEvents ComboBox3 As ComboBox
     Friend WithEvents Label6 As Label
-    Friend WithEvents Label7 As Label
     Friend WithEvents IconButton1 As FontAwesome.Sharp.IconButton
     Friend WithEvents IconButton2 As FontAwesome.Sharp.IconButton
+    Friend WithEvents GroupBox1 As GroupBox
+    Friend WithEvents txtSegurosR As ComboBox
+    Friend WithEvents txtSexoR As ComboBox
 End Class

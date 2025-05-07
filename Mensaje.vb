@@ -16,7 +16,7 @@ Public Class Mensaje
         Dim WS As New WS.WebService1SoapClient
         Dim ds As db.TSegurosDataTable = WS.MostrarSeguros()
         ComboBox1.Items.Clear()
-        seguros.Clear() ' Limpiar el diccionario antes de llenarlo
+        seguros.Clear()
         For Each row As db.TSegurosRow In ds.Rows
             ComboBox1.Items.Add(row.nombre)
             seguros(row.nombre) = row.SegurosID ' Guardar el id asociado al nombre

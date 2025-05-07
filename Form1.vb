@@ -51,13 +51,15 @@ Public Class Form1
             End If
 
         Else
-            txtCI.Clear()
+            ' txtCI.Clear()
             txtNombre.Clear()
             txtSexo.Clear()
             txtEstado.Text = "Esperando."
             txtFechaNac.Value = Date.Now
             If MsgBox("El numero del CI de la persona no esta registrasa" & vbNewLine & "Desea registrarlo?", MsgBoxStyle.YesNo, "Registrar Nuevo ASegurado") = MsgBoxResult.Yes Then
-                MsgBox("Aqui crear el nuevo asegurado")
+                Dim f As New Agregar
+                f.txtCIR.Text = txtCI.Text
+                f.ShowDialog()
             End If
             BtnOpcion.Visible = False
         End If
