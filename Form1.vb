@@ -13,6 +13,7 @@ Public Class Form1
         DatosAfiliaciones.Columns.Remove("Estado")
         DatosAfiliaciones.Columns.Remove("fecha_nac")
         DatosAfiliaciones.Columns.Remove("Sexo")
+        BtnOpcion.Visible = True
         If ds.Item(0).estado = "ALTA" Then
             BtnOpcion.Text = "DAR BAJA"
             estado2 = "ALTA"
@@ -20,7 +21,19 @@ Public Class Form1
             BtnOpcion.Text = "DAR ALTA"
             estado2 = "BAJA"
         End If
-
+    End Sub
+    Private Sub mostrarDatos()
+        Dim ws As New WS.WebService1SoapClient
+        Dim ds As New db.HistorialAfilacionesDataTable
+        Dim CI As String = txtCI.Text
+        ds = ws.ConsultarHistorial(txtCI.Text)
+        If ds.Rows.Count > 0 Then
+            txtNombre.Text = ds.Item(0).Asegurado
+            txtFechaNac.Value = ds.Item(0).fecha_nac
+            txtSexo.Text = ds.Item(0).sexo
+            txtEstado.Text = ds.Item(0).estado
+            DatosAfiliaciones.DataSource = ds
+        End If
     End Sub
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         BtnOpcion.Visible = False
@@ -60,6 +73,8 @@ Public Class Form1
                 Dim f As New Agregar
                 f.txtCIR.Text = txtCI.Text
                 f.ShowDialog()
+                mostrarDatos()
+                MostrarHistorial()
             End If
             BtnOpcion.Visible = False
         End If

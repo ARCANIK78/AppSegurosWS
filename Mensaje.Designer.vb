@@ -95,7 +95,7 @@ Partial Class Mensaje
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(366, 106)
         Me.Controls.Add(Me.GroupBox1)
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
         Me.Name = "Mensaje"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Dar de Alta Asegurado"

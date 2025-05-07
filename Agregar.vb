@@ -16,6 +16,8 @@ Public Class Agregar
         Try
             Dim ws As New WS.WebService1SoapClient
             MsgBox(ws.RegistrarNuevoAfiliado(txtCIR.Text, txtNombreR.Text, txtPaternoR.Text, txtMaternoR.Text, txtFechaNac.Value, txtSexoR.Text, txtSegurosR.SelectedValue))
+            Dim ventanafomr1 As New Form1
+
             Close()
         Catch ex As Exception
             MsgBox(Err.Description)
