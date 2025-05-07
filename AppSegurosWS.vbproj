@@ -82,6 +82,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Agregar.Designer.vb">
+      <DependentUpon>Agregar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Agregar.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Connected Services\WS\Reference.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -117,6 +123,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Agregar.resx">
+      <DependentUpon>Agregar.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
     </EmbeddedResource>
